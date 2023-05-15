@@ -247,15 +247,15 @@ static int multibuff_rsa_add_padding_pub_enc(const unsigned char *from,
                                          from,
                                          from_len);
         break;
-    case RSA_PKCS1_OAEP_PADDING:
-        padding_result =
-            RSA_padding_add_PKCS1_OAEP(to,
-                                       to_len,
-                                       from,
-                                       from_len,
-                                       NULL,
-                                       0);
-        break;
+    // case RSA_PKCS1_OAEP_PADDING:
+    //     padding_result =
+    //         RSA_padding_add_PKCS1_OAEP(to,
+    //                                    to_len,
+    //                                    from,
+    //                                    from_len,
+    //                                    NULL,
+    //                                    0);
+    //     break;
 #ifndef QAT_OPENSSL_3
     case RSA_SSLV23_PADDING:
         padding_result =

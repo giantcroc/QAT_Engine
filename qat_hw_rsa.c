@@ -858,11 +858,11 @@ build_encrypt_op_buf(int flen, const unsigned char *from, unsigned char *to,
                 RSA_padding_add_PKCS1_type_2((*enc_op_data)->inputData.pData,
                                              rsa_len, from, flen);
             break;
-        case RSA_PKCS1_OAEP_PADDING:
-            padding_result =
-                RSA_padding_add_PKCS1_OAEP((*enc_op_data)->inputData.pData,
-                                           rsa_len, from, flen, NULL, 0);
-            break;
+        // case RSA_PKCS1_OAEP_PADDING:
+        //     padding_result =
+        //         RSA_padding_add_PKCS1_OAEP((*enc_op_data)->inputData.pData,
+        //                                    rsa_len, from, flen, NULL, 0);
+        //     break;
 # ifndef QAT_OPENSSL_3
         case RSA_SSLV23_PADDING:
             padding_result =
